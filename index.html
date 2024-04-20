@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dctp-Front-End-Assignment1</title>
+    
+<style>
+
+.gradient-background {
+  background: linear-gradient(300deg, #4626fa, #23cdf8, #f50f0f);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  
+}
+
+   
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+    
+    table caption {
+            font-size: 1.3em;
+            font-weight: bolder;}
+
+    @media screen and (max-width: 400px) {
+        table {
+            border: 0;
+        }
+        table caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+        }
+        table thead {
+            display: none;
+        }
+        table tr {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+        }
+        table td {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+            border-right: 1px solid #ddd;
+        }
+        table td::before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            
+        }
+    }
+</style>
+
+
+
+</head>
+<body class="gradient-background">
+    
+    <table>
+       
+        <caption>  Responsive Table  </caption>
+        <thead>
+            <tr>
+                <th>Athlete</th>
+                <th> Club </th>
+                <th> Country </th>
+                <th>Player Number </th>
+                
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <td data-label="Athlete"> Cristiano Ronaldo </td>
+                <td data-label="Club"> Al-Nassr </td>
+                <td data-label="Country"> Portugal</td>
+                <td data-label="Player Number"> 7 </td>
+            </tr>
+           
+            <tr>
+            <td data-label="Athlete"> Lionel Messi </td>
+            <td data-label="Club"> Inter Miami </td>
+            <td data-label="Country"> Argentina </td>
+            <td data-label="Player Number"> 10 </td>
+            </tr>
+
+            <tr>
+                <td data-label="Athlete"> Marcus Rashford</td>
+                <td data-label="Club"> Manchester United </td>
+                <td data-label="Country"> England </td>
+                <td data-label="Player Number"> 10 </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
